@@ -1,0 +1,106 @@
+# coding=UTF-8
+import re
+html  = '''
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://m.bqg99.com/book/17418/2.html"/>
+<meta http-equiv="mobile-agent" content="format=xhtml; url=https://m.bqg99.com/book/17418/2.html"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>君逍遥开局签到荒古圣体_第2章 惊动十八祖，神子身份，零号序列！_笔趣阁</title>
+<meta name="keywords" content="君逍遥开局签到荒古圣体,第2章 惊动十八祖，神子身份，零号序列！"/>
+<meta name="description" content="笔趣阁提供了J神最新创作的玄幻小说《君逍遥开局签到荒古圣体》干净清爽无错字的文字章节：第2章 惊动十八祖，神子身份，零号序列！ 在线阅读。"/>
+<link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body id="read" class="read">
+<div class="header_wap pc_none">
+	<a class="home" href="javascript:history.go(-1);"><svg class="lnr lnr-chevron-left-circle"><use xlink:href="#lnr-chevron-left-circle"></use></svg></a>
+	<span class="title">第2章 惊动十八祖，神子身份，零号序列！_君逍遥开局签到荒古圣体</span>
+	<a class="user" href="/"><svg class="lnr lnr-home"><use xlink:href="#lnr-home"></use></svg></a>
+</div>
+<div class="header_top"></div>
+<div class="header wap_none">
+	<div class="wrap">
+		<div class="logo">
+			<a href="/" title="笔趣阁">笔趣阁</a>
+		</div>
+		<div class="search">
+			<form action="/s" onsubmit="if(q.value==''){alert('提示：请输入小说书名或作者名字！');return false;}">
+			<input type="search" class="text" name="q" placeholder="可搜书名和作者，请您少字也别输错字。" value="" />
+			<input type="submit" class="btn" value="">
+			</form>
+		</div>
+		<div class="share"><a href="/bookcase.html">阅读记录</a></div>
+	</div>
+	<div class="nav"><ul><li class="this"><a href="/">首页</a></li><li><a href="/xuanhuan/">玄幻</a></li><li><a href="/wuxia/">武侠</a></li><li><a href="/dushi/">都市</a></li><li><a href="/lishi/">历史</a></li><li><a href="/wangyou/">网游</a></li><li><a href="/kehuan/">科幻</a></li><li><a href="/mm/">女生</a></li><li><a href="/finish/">完本</a></li><li><a href="/top/">排行榜</a></li></ul></div>
+<div class="clear"></div>
+</div>
+<div class="book reader">
+	<div class="path wap_none"><a href="/">笔趣阁</a> &gt; <a href="/book/17418/">君逍遥开局签到荒古圣体</a> &gt; 第2章 惊动十八祖，神子身份，零号序列！</div>
+	<div class="Readbtn">
+        字体：<a id="fontbig" class="sizebg" onclick="nr_setbg('big')">大</a> <a id="fontmiddle" class="sizebg" onclick="nr_setbg('middle')" >中</a> <a id="fontsmall" class="sizebg" onclick="nr_setbg('small')">小</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a id="huyandiv" class="button huyanon"  onclick="nr_setbg('huyan')">护眼</a> <a id="lightdiv" class="button lightoff" onclick="nr_setbg('light')">关灯</a>
+	</div>
+	<div class="content">
+		<h1 class="wap_none">第2章 惊动十八祖，神子身份，零号序列！</h1>
+		<div class="link wap_none">新书推荐：<a href="/book/1228/">异世邪君</a>、<a href="/book/7681/">光之子</a>、<a href="/book/775/">天逆</a>、<a href="/book/3300/">万相之王</a>、<a href="/book/1548/">帝霸</a>、<a href="/book/100351/">我有一剑</a>、<a href="/book/9683/">我什么时候无敌了</a>、<a href="/book/33781/">他的小宝贝太娇气</a>、<a href="/book/566/">绝世武魂</a>、<a href="/book/1473/">逆剑狂神</a></div>
+	<div class="Readpage pc_none">
+		<a href="/book/17418/1.html" id="pb_prev" class="Readpage_up">上一章</a>
+		<a href="/book/17418/" id="pb_mulu" class="Readpage_up">目录</a>
+		<a href="/book/17418/3.html" id="pb_next" class="Readpage_down js_page_down">下一章</a>
+	</div>
+		<div id="chaptercontent" class="Readarea ReadAjax_content">　　“好吧，连系统都不想让我低调……”君逍遥心里默默吐槽了一句。<br /><br />　　“叮，签到地点刷新，请在泰岳古碑签到！”<br /><br />　　“泰岳古碑，那是在什么地方？”君逍遥暗想。<br /><br />　　不过此事倒是不急，毕竟现在他只是一个婴儿，而且已经签到了一具大成荒古圣体，可以说是完美开局了。<br /><br />　　接下来的签到地点，日后再找不迟。<br /><br />　　“这次签到得到的是大成荒古圣体，不知道下次签到又会得到什么好东西？”君逍遥心里倒是有些期待。<br /><br />　　而这时，君战天却是一拍脑门道：“对了，还没有给我的宝贝孙儿起名字，要不叫他君长生怎么样，寓意他日后要证道长生。”<br /><br />　　被抱在怀里的君逍遥有些无语。<br /><br />　　君长生这个名字虽然听得过去，但他还是希望能用自己的名字。<br /><br />　　“哎，这个不妥，叫长生的人也太多了，俗气！”一些族老摇头道。<br /><br />　　现在是人是狗都敢取名叫长生，这种烂大街的名字怎么配得上他们君家的麒麟子？<br /><br />　　这时，一道有些虚弱的声音突然响起：“不如就叫他逍遥吧，夫君曾说过，成仙容易逍遥难，我只希望我的孩儿，日后逍遥一生。”<br /><br />　　躺在床榻上，面容苍白的美丽女子开口道。<br /><br />　　她正是君逍遥的生母，姜柔。<br /><br />　　面对姜柔的建议，君战天等人不能忽略。<br /><br />　　因为姜柔的身份也没那么简单，是荒古世家姜家的一位神女。<br /><br />　　姜家虽然没有君家那么名声在外，但同样是荒古世家，又能弱到哪里去？<br /><br />　　“好，那就叫逍遥了。”君战天点头，只是他好像突然想到了什么心事似的，微微一叹。<br /><br />　　君逍遥看到这状况，眼皮一跳。<br /><br />　　他这才发现，自己的父亲貌似不在这里。<br /><br />　　不会又是那种父亲祭天，法力无边的套路吧？<br /><br />　　“战天，莫要忧心，君无悔可是白衣神王，岂会那么容易陨落，而且这孩子日后成长起来，未必不能去寻找帮助他的父亲。”一旁一位老妪出口安慰道。<br /><br />　　“也对，哈哈，我还有宝贝孙儿！”君战天恢复了笑容。<br /><br />　　君逍遥眼睛眨动，暗暗记下了他父亲的称谓。<br /><br />　　白衣神王君无悔。<br /><br />　　从这名字看来，自己的父亲，貌似逼格挺高啊……<br /><br />　　“逍遥是大成荒古圣体消息传出去，怕是会引起仙域震动，要知道，暗地里想对我君家不利的势力也不少。”一位族老带着深意道。<br /><br />　　“你的意思是，动用手段掩盖逍遥身上的圣体波动？”君战天道。<br /><br />　　其余族老也是微微点头。<br /><br />　　木秀于林，风必摧之。<br /><br />　　君逍遥现在可谓是君家的宝，一点差错都不能出现。<br /><br />　　“我君家后人，什么时候学会遮遮掩掩了，一具圣体都保护不了吗？”<br /><br />　　这时，一道冷哼之声忽然从天穹炸响。<br /><br />　　整个君家都是被惊动了，无数道目光投向天帝宫上方。<br /><br />　　“那股波动……”<br /><br />　　“好强大的气息，是沉眠在祖祠里的老祖宗，从棺材里爬出来了！”<br /><br />　　“嘶……连老祖都被惊动了吗？”四面八方传来无数君家人倒吸凉气的声音。<br /><br />　　那可是君家的老祖级人物，很多君家人一辈子都无缘见老祖一面。<br /><br />　　而君逍遥一生下来，竟然就惊动了老祖，令很多人心头震撼，露出羡慕情绪。<br /><br />　　天帝宫内，君战天等族老听到这声音，也是带着震动之色，急忙走出天帝宫。<br /><br />　　天帝宫上方虚空，裂开了一道巨大的空间裂缝。<br /><br />　　一道有些干瘦的灰衣身影出现。<br /><br />　　那是一位灰袍老者，头上，身上，还沾染着尘土，好似刚从地里爬出来。<br /><br />　　但他干瘪的身躯里，却仿佛蕴藏着撼世之力！<br /><br />　　如同诸天万界，都被他踏在脚下！<br /><br />　　“是十八祖，见过十八祖！”<br /><br />　　君战天等人急忙躬身。<br /><br />　　这位灰袍老者，可是君家真正的老祖级人物，埋在君家祖祠无数年。<br /><br />　　唯有君家产生巨大变故，或者到达生死存亡关头时，才会苏醒过来。<br /><br />　　君战天等人想都没想到，君逍遥的出生，竟然会引起老祖宗的注意。<br /><br />　　十八祖身形一闪，仿佛闪现一般，出现在了君战天身前，将君逍遥抱了过来。<br /><br />　　他目光深邃如日月，看向君逍遥。<br /><br />　　君逍遥则眨巴着眼睛，不哭不闹，反而带着一丝好奇。<br /><br />　　“这是我君家老祖吗，好强大的气息，比爷爷的气息还要强大。”君逍遥心里暗想。<br /><br />　　十八祖则是忍不住大笑起来道：“好……好，我君家又出了一头真龙，你们这些蠢东西，竟然还想掩盖这孩子的光芒。”<br /><br />　　“十八祖，我是怕日后有人对我孙儿不利……”君战天硬着头皮道。<br /><br />　　他们这群族老地位虽高，但在十八祖面前，也只能算是后生晚辈。<br /><br />　　“哼，我看谁敢，那些老不死的若是敢拉下脸面对逍遥出手，老夫不介意掀起不朽战，杀他个天翻地覆，血流亿万里！”<br /><br />　　十八祖态度霸道无边。<br /><br />　　君战天等人都是暗暗咽了一口唾沫。<br /><br />　　不朽战，乃是荒古世家，无上皇朝，太古皇族这种等级的不朽道统所掀起的大战。<br /><br />　　一战，可让仙域天翻地覆，亿万苍生喋血。<br /><br />　　荒天仙域，已经许久没有掀起过不朽战了。<br /><br />　　“老夫宣布，以后这孩子就是我君家神子，所有修炼资源向他倾斜，就算硬堆，也得堆出一具大成圣体出来！”十八祖吩咐道。<br /><br />　　君战天等族老自是点头认同。<br /><br />　　天生打破枷锁的荒古圣体，傻子才会不去培养。<br /><br />　　“而且，赐予这孩子，零号序列的资格……”十八祖继续道。<br /><br />　　“什么？”众族老震惊。<br /><br />　　如果说只是赐予神子身份，那倒也罢了，毕竟只是一个身份地位的象征。<br /><br />　　但序列可就不同了。<br /><br />　　君家序列，是有资格去争夺家主之位的。<br /><br />　　君家年轻一代人数足有数万人。<br /><br />　　但获得序列身份的，也仅有十人而已。<br /><br />　　也就是说，只有这十人才有资格争夺家主之位。<br /><br />　　这十人，每一个拿出去，都可惊艳一个时代，是君家最优秀的十大天骄。<br /><br />　　而在十大序列之上，更有一个零号序列。<br /><br />　　零，代表一无所有，也代表无限可能！<br /><br />　　其地位，还在第一序列之上！<br /><br />　　上一代的零号序列，正是君逍遥的父亲，白衣神王君无悔！<br /><br />　　“十八祖，这未免有些不妥吧，会让其他序列心生不满……”一位老妪试探道。<br /><br />　　每一位序列，都是历经无数考验，才得到这个身份的。<br /><br />　　君逍遥一生下来就赐予零号序列，这让其他序列心里怎么想？<br /><br />　　“他们不满，让他们日后自己去争，争得过这孩子再说。”十八祖一甩衣袖道。<br /><br />　　听其语气，显然对君逍遥极为自信。<br /><br />　　君逍遥闻言，默默一叹。<br /><br />　　爷爷对他寄予厚望，老祖对他另眼相看，还有自己父亲的隐秘，以及那些君家的隐患。<br /><br />　　看来还真是不能当一条咸鱼。<br /><br />　　“无敌天赋，无敌背景，系统辅助，有这种完美开局，若还不能镇压一个时代，那只能说我太菜了……”君逍遥暗想道。<br /><br />　　请收藏本站：https://www.bqg99.com。笔趣阁手机版：https://m.bqg99.com <br /><br />
+		<p class="readinline"><a class="ll" rel="nofollow" title="章节错误,点此举报[免注册]" href="javascript:chapter_error('1666','2','君逍遥开局签到荒古圣体','第2章 惊动十八祖，神子身份，零号序列！','1634744756');">『点此报错』</a><a class="rr" rel="nofollow" title="加入书签，方便阅读" href="javascript:addBookMark('17418','2','君逍遥开局签到荒古圣体','第2章 惊动十八祖，神子身份，零号序列！');">『加入书签』</a></p></div>
+	<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+	<script type="text/javascript" src="/js/read.js"></script>
+	<script>read2();</script>
+	<div class="Readpage pagedown">
+		<a href="/book/17418/1.html" id="pb_prev" class="Readpage_up">上一章</a>
+		<a href="/book/17418/" id="pb_mulu" class="Readpage_up">目录</a>
+		<a href="/book/17418/3.html" id="pb_next" class="Readpage_down js_page_down">下一章</a>
+	</div>
+	<script>read3();</script>
+	</div>
+</div>
+
+<div class="footer_wap pc_none">
+	<a href="#top"><svg class="lnr lnr-arrow-up-circle"><use xlink:href="#lnr-arrow-up-circle"></use></svg></a>
+	<p class="version channel">
+	<a href="/">首页</a>
+	<a href="/user/bookcase.html">我的书架</a>
+	<a href="/bookcase.html" >阅读记录</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+var preview_page = "/book/17418/1.html";
+var next_page = "/book/17418/3.html";
+var index_page = "/book/17418/";
+function jumpPage() {
+  if (event.keyCode==37) location=preview_page;
+  if (event.keyCode==39) location=next_page;
+  if (event.keyCode==13) location=index_page;
+}
+document.onkeydown=jumpPage;getset();getset1();
+lastread.set('17418','2','君逍遥开局签到荒古圣体','第2章 惊动十八祖，神子身份，零号序列！','J神','玄幻');
+</script>
+
+<div class="footer wap_none">
+	<div class="link">热门推荐：<a href="/book/17351/">伏天氏起点</a>、<a href="/book/17284/">西游之人在天庭朝九晚五</a>、<a href="/book/17217/">帝国玩具</a>、<a href="/book/17150/">我种地种成了世界首富</a>、<a href="/book/17083/">斗罗渣男榜，开局杀了玉小刚</a>、<a href="/book/17016/">震世医神赵阳林采涵</a>、<a href="/book/16949/">安之若素小说叶澜成安之素</a>、<a href="/book/16882/">天降六宝：顾总追妻火葬场沈潇潇顾庭霄</a>、<a href="/book/16815/">医妃天天要休夫白晚舟南宫丞</a>、<a href="/book/16748/">都市神婿林浩沈惜颜</a></div>
+	<hr>
+	<p>本站所有小说为转载作品，所有章节均由网友上传，转载至本站只是为了宣传本书让更多读者欣赏。</p>
+	<p>Copyright &#169; bqg99.com All Rights Reserved.</p>
+</div>
+<script>tj();</script>
+</body>
+</html>
+'''
+rule = r'<br />\s+(.*?)<br />'
+lst = re.findall(rule, html, re.S)
+for i in lst:
+    print('hello')
+print(lst[0, -1])
