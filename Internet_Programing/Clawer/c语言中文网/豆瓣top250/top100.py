@@ -20,19 +20,18 @@ def save_content(filename, string_lst):
 
 
 def my_re(html, chpt_html='', mode='get_url'):
-    url = 'https://www.bqg99.com'
+    url     = 'https://www.bqg99.com'
     # re expression get the url
     if mode == 'url':
-        rule = '<dd><a href ="(/book/\d+?/\d+?.html)">(.*?)</a></dd>'
-        lst = re.findall(rule, html)
+        rule        = '<dd><a href ="(/book/\d+?/\d+?.html)">(.*?)</a></dd>'
+        lst         = re.findall(rule, html)
         UrlName_dic = {}
 
-        # create the {name:url} dictionary
         for t in lst:
             try:
-                u = t[0]        # url
-                n = t[1]        # name
-                u = url + u
+                u              = t[0]        # url
+                n              = t[1]        # name
+                u              = url + u
                 UrlName_dic[u] = n
             except Exception as e:
                 print('my_re get the url Error\n')
@@ -52,7 +51,7 @@ def my_re(html, chpt_html='', mode='get_url'):
 class My_Clawer(Clawer):
 
     def run(self, url):
-        html = self.get_html(url)
+        html        = self.get_html(url)
         # print('successfully get the intro html')
 
         # get the intro html_url:name
@@ -60,16 +59,16 @@ class My_Clawer(Clawer):
 
         # get the chpt_html
         for chpt_nu in range(100, 2310):
-            chpt_url = 'https://www.bqg99.com/book/17418/{}.html'.format(chpt_nu)
-            chpt_html = self.get_html(chpt_url)
+            chpt_url      = 'https://www.bqg99.com/book/17418/{}.html'.format(chpt_nu)
+            chpt_html     = self.get_html(chpt_url)
 
             # save the chpt_html
-            chpt_name = './chapter_html/' + NameUrl_dic[chpt_url]
+            chpt_name     = './chapter_html/' + NameUrl_dic[chpt_url]
             self.save_html(chpt_html, chpt_name)
 
             # re expression get the content
             chpt_filename = NameUrl_dic[chpt_url] + '.txt'
-            chpt_content = my_re(html, chpt_html, 'content')
+            chpt_content  = my_re(html, chpt_html, 'content')
             chpt_filename = './chapter/' + chpt_filename
             save_content(chpt_filename, chpt_content)
             print('successfully save one chpt!')
@@ -77,19 +76,12 @@ class My_Clawer(Clawer):
             # stop and rest
             time.sleep(random.randint(1,2))
 
-        # print(chpt_content)
-
-
-        # except Exception as e:
-
-
 
 
 def main():
     url = 'https://www.bqg99.com/book/17418'
-    sp = My_Clawer()
+    sp  = My_Clawer()
     sp.run(url)
-
 
 
 
