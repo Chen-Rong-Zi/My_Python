@@ -11,48 +11,48 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 
 class Clawer:
-    url = 'https://movie.douban.com/top250'
+    url = 'https://www.bing.com'
     def __init__(self):pass
-
 
 
 
    # 拼接url，更改url属性
     def combine_url(self, url, string=''):
         content = pr.quote(string)
-        url = url + string
+        url     = url + string
         return url
 
 
 
     # 爬取网页，返回html列表
-    def get_html(self, url, encoding='UTF-8'):
+    def get_html(self, url):
     # 老三样，万用方法
         # 1.封装请求
-        head = {'UserAgent':random.choice(UA)}
+        head    = {'UserAgent':random.choice(UA)}
         request = rq.Request(url,headers=head)
         try:
             # 2.发送请求，返回应答对象
             response = rq.urlopen(request, timeout=3)
             # 3.读取(byte)html，bs4使html更符合规范
             # bs = BS(response.read().decode(), 'html.parser')
-            html = response.read().decode(encoding)
+            html     = response.read().decode()
             # print(html[300:500])
             return html
         except Exception as e:
-            print('get_html error!!')
+            print('get_html error!!', end = '错误信息=')
             print(e)
 
 
     # 保存html文件
     def save_html(self, html, dir_path='./'):
-        filename = dir_path #+ '.html'
+        filename = dir_path + '.html'
         with open(filename, 'w', encoding='utf-8') as f:
             try:
                 f.write(html)
-                print(filename)
+                print(f'Successfully save!  filename={filename}')
             except:
                 print('save_html error!')
+            print(filename)
 
 
 
@@ -62,28 +62,29 @@ class Clawer:
         # 1.url的编码、拼接,返回新url
         '''    url参数无默认值
                string参数默认为空字符串'''
-        url = self.combine_url(url)
+        url  = self.combine_url(url)
         
         # 2.发送请求，返回html
         '''    url参数无默认值'''
         html = self.get_html(url)
+        # print(html)
         
         # 3.保存html文件
         '''    url参数无默认值
                dir_path参数默认为'./'
                html参数无默认值，须为字符串'''
-        self.save_html(url, html, dir_path)
+        self.save_html(html, dir_path)
 
 
 # 测试
 def main():
     start = time.time()
     
-    sp = Clawer()
-    url = sp.url
-    sp.run(url)
+    sp    = Clawer()
+    url   = sp.url
+    sp.run(url, dir_path='C:\\Program Files (x86)\Vim')
     
-    end = time.time()
+    end   = time.time()
     print(f'运行时间：{end-start}')
     
     

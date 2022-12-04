@@ -1,0 +1,170 @@
+"      ███╗   ███╗██╗   ██╗██╗   ██╗██╗███╗   ███╗██████╗  ██████╗
+"      ████╗ ████║╚██╗ ██╔╝██║   ██║██║████╗ ████║██╔══██╗██╔════╝
+"      ██╔████╔██║ ╚████╔╝ ██║   ██║██║██╔████╔██║██████╔╝██║
+"      ██║╚██╔╝██║  ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║██╔══██╗██║
+"      ██║ ╚═╝ ██║   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║██║  ██║╚██████╗
+"      ╚═╝     ╚═╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
+
+
+"      ███╗   ███╗██╗   ██╗██╗   ██╗██╗███╗   ███╗██████╗  ██████╗
+"      ████╗ ████║╚██╗ ██╔╝██║   ██║██║████╗ ████║██╔══██╗██╔════╝
+"      ██╔████╔██║ ╚████╔╝ ██║   ██║██║██╔████╔██║██████╔╝██║
+"      ██║╚██╔╝██║  ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║██╔══██╗██║
+"      ██║ ╚═╝ ██║   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║██║  ██║╚██████╗
+"      ╚═╝     ╚═╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
+
+imap <space>+ <space>+<space><right>
+imap <space>= <space>=<space><right>
+imap <space>- <space>-<space><right>
+imap <space>* <space>*<space><right>
+imap <space>/ <space>/<space><right>
+imap <space>% <space>%<space><left><right>
+
+cmap ; <Enter>
+nmap ; <Enter>
+imap ; <right><right><right><right><right><right><right><right><Enter>
+" return to the file .vimrc
+nmap Tv :e \Program Files (x86)\Vim\_vimrc<Enter>
+
+" return to the Current Directory
+nmap Te :e  %:p:h/.."<Enter>
+
+" return to the /Program Files (x86)/
+nmap Tp :e /Program Files (x86)<Enter>
+
+" To Run the python script by type Tr
+nmap Tr <S-s>:!python "%:p"<Enter>
+
+" number in front of lines
+hi LineNr guifg=#5C6370
+set relativenumber
+set ruler
+set number
+set nowrap
+set ignorecase
+set wildmenu
+set showcmd
+set cursorline
+set encoding=utf-8
+set scrolloff=5
+
+" Shortcuts
+imap jk <esc>
+
+"cmap 1 !
+nmap w <C-w>
+nmap <space> :
+nmap s m
+nmap 7 5j
+nmap 8 5k
+
+"  <tab> and <space> visualised
+set list
+set listchars=tab:>-,trail:-
+
+" Fold paragraph
+set autoindent
+set smartindent
+set foldmethod=indent
+nmap ff za
+nmap fk zm
+nmap fj zr
+
+" Tab methods
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set smarttab
+
+" Shut down the error bell
+set novisualbell
+set noerrorbells
+
+" Share the clipboard
+set clipboard+=unnamed
+set laststatus=2
+
+" Spell Check
+nmap sc :set spell!<Enter>
+imap <S-s><S-C> <C-x>s
+
+" Shortcuts switched
+nmap <space> :
+nmap s m
+nmap 7 5j
+nmap 8 5k
+
+" shutdown the Error Warning
+set vb t_vb=
+au GuiEnter * set t_vb=
+" Syntax Highlight
+syntax on
+
+" Color Scheme | Font
+set guifont:Consolas:h15
+syntax enable
+"set term=xterm-256color
+set t_Co=256
+"colorscheme Tomorrow-Night-Eighties
+"g:onedark_hide_endofbuffer:1
+"g:onedark_termcolor:256
+"set -g default-terminal"xterm-256color"
+"set default-terminal"screen-256color"
+colorscheme onedark
+
+
+" 高亮 显示
+" set hlsearch
+set incsearch
+
+" Tab Site
+nmap tt :tabe<Enter>
+nmap th :-tabnext<Enter>
+nmap tl :+tabnext<Enter>
+
+" Screen Create
+nmap sk :set splitbelow<Enter>:split<Enter>
+nmap sj :set nosplitbelow<Enter>:split<Enter>
+nmap sh :set splitright<Enter>:vsplit<Enter>
+nmap sl :set nosplitright<Enter>:vsplit<Enter>
+
+" Screen Switch
+nmap K <C-w>K
+nmap J <C-w>J
+nmap H <C-w>H
+nmap L <C-w>L
+
+" Screen Size
+nmap _ :resize -5<Enter>
+nmap + :resize +5<Enter>
+nmap - :vertical resize -5<Enter>
+nmap = :vertical resize +5<Enter>
+
+" 保存
+nmap S :w<Enter>
+
+" Auto Complete the () or <>
+imap ( ()<left>
+imap < <><left>
+
+"set lines=500 columns=500
+set guioptions-=T
+set guioptions-=m
+set guioptions-=L
+set guioptions-=r
+set guioptions-=b
+
+" HELP Document
+set helplang=cn
+set encoding=utf-8
+
+
+" Full Screen Set
+noremap \| <esc>:call libcallnr('gvim_fullscreen.dll', 'ToggleFullscreen', 0)<Enter>
+" 按 F12 切换窗口透明度
+noremap <C-j>j <esc>:call libcallnr('gvim_fullscreen.dll', 'ToggleTransparency', "100,180")<Enter>
+noremap <C-k>k <esc>:call libcallnr('gvim_fullscreen.dll', 'ToggleTransparency', "225,255")<Enter>
+
+let g:lightline = { 'colorscheme': 'onedark',}
+let g:airline_theme='onedark'

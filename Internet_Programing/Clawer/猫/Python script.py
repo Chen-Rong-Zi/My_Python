@@ -18,9 +18,9 @@ def get_html(request):
 
 
 def get_images(html):
-    html_bs = BeautifulSoup(html,'html.parser')
+    html_bs  = BeautifulSoup(html,'html.parser')
     # 提取img
-    bs_img = html_bs.find_all('img')
+    bs_img   = html_bs.find_all('img')
     # 创建空列表
     url_list = []
     
@@ -33,12 +33,12 @@ def get_images(html):
     # for url in url_list:
         # print(url)
     # 提取下一页的url
-    bs_a = html_bs.find_all('div',class_="nav-links")
-    bs_a_a = bs_a[0].find_all('a',href=True)
+    bs_a          = html_bs.find_all('div',class_="nav-links")
+    bs_a_a        = bs_a[0].find_all('a',href=True)
     NextPage_attr = bs_a_a[-1]
     print(NextPage_attr)
     NextPage_link = NextPage_attr.attrs['href']
-    NextPage_link ='''http://www.k2r2.com'''+NextPage_link
+    NextPage_link = '''http://www.k2r2.com'''+NextPage_link
     print(NextPage_link)
     return url_list, NextPage_link
 
@@ -51,16 +51,16 @@ def save_images(url_list,page=1):
 
     # 遍历列表，发送post
     for url in url_list: 
-        head = {"User-Agent": "Mozilla/5.0(Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/59.0.3071.115 Safari/537.36"}
+        head    = {"User-Agent": "Mozilla/5.0(Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/59.0.3071.115 Safari/537.36"}
     # 封装请求，头部信息
         request = urllib.request.Request(url,headers=head)
 
         # 发送post,获取图片byte
-        image = urllib.request.urlopen(request)
-        
+        image   = urllib.request.urlopen(request)
+        print(image.read())
         # 保存图片
-        url_sequence = url_sequence+1
-        f_name = '''./猫咪图片/第{0}页、第{1}张图片.jpg'''.format(page,url_sequence)
+        url_sequence = url_sequence + 1
+        f_name  = '''./猫咪图片/第{0}页、第{1}张图片.jpg'''.format(page,url_sequence)
         with open(f_name,'ab+') as f_name:
             f_name.write(image.read())
 
@@ -69,11 +69,11 @@ def save_images(url_list,page=1):
 
 # 递归结构
 def continue_get(NextPage_link,times=9):
-    url = NextPage_link
+    url     = NextPage_link
     #包装头部信息
     request = urllib.request.Request(url,headers=head)
     # 获取html
-    html = get_html(request)
+    html    = get_html(request)
     # 获取图片
     url_list, Nextpage_link = get_images(html) 
     # 保存图片
@@ -89,13 +89,13 @@ def continue_get(NextPage_link,times=9):
 
 
 def main():
-    url = 'http://www.k2r2.com/maomai_c36803/'
+    url     = 'http://www.k2r2.com/maomai_c36803/'
     global head
-    head = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"}
+    head    = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"}
     # 封装请求，头部信息
     request = urllib.request.Request(url,headers=head)
     # 1.发送post请求，获取html文件
-    html = get_html(request)
+    html    = get_html(request)
     # 2.提取图片链接，返回图片链接列表、下一页的链接
     url_list, NextPage_link = get_images(html)
     # 3.遍历链接列表，重复发送post，获取图片并保存
