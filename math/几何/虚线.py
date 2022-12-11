@@ -6,8 +6,8 @@ from 立体几何 import Cube
 pen = 立体几何()
 pen.axis.set_title('cube')
 
-cube = Cube(20, 20, 20, reserve=True)
-cube.show_tips()
+cube = Cube(20, 20, 20, reverse=True)
+cube.highlight_tips()
 cube.plot()
 
 pen.连线([cube.A , cube.C], '--', color='red')
